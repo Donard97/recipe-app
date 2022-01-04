@@ -54,6 +54,8 @@ gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'cancancan'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'database_cleaner'
