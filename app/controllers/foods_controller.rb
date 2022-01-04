@@ -1,16 +1,16 @@
 class FoodsController < ApplicationController
-load_and_authorize_resource
-before_action :set_food, only: [:show, :destroy]
+  load_and_authorize_resource
+  before_action :set_food, only: %i[show destroy]
 
-def index
-  @food = current_user.foods
-end
+  def index
+    @food = current_user.foods
+  end
 
-def new
-  @food = Food.new
-end
+  def new
+    @food = Food.new
+  end
 
-def create
+  def create
     @food = current_user.foods.new(food_params)
 
     respond_to do |format|
