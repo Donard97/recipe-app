@@ -1,14 +1,14 @@
-<div>
-  <%= link_to 'Add Food', new_food_path%>
-</div>
+<div class="container">
+  <%= link_to 'Add Food', new_food_path, class: "btn btn-info add-btn" %>
+
 
 <div>
-  <table>
+  <table class="table">
     <thead>
       <tr>
-        <th>Food</th>
-        <th title="measurement">Measurement unit</th>
-        <th title="price">Unit price</th>
+        <th scope="col">Food</th>
+        <th scope="col" title="measurement">Measurement unit</th>
+        <th scope="col" title="price">Unit price</th>
         <th>Actions</th>
       </tr>
     </thead>
@@ -16,7 +16,7 @@
     <tbody>
       <% @foods.each do |food| %>
         <tr>
-          <th><%= food.name %></th>
+          <th scope="row"><%= food.name %></th>
           <td><%= food.measurement_unit %></td>
           <td>$<%= food.price %></td>
           <td><%= link_to 'Delete', food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -24,4 +24,5 @@
       <% end %>
     </tbody>
   </table>
+</div>
 </div>

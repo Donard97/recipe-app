@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.add-btn {
+  float: right;
+}

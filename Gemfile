@@ -56,6 +56,14 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'cancancan'
 
+gem 'bootstrap-sass'
+
+gem 'bootstrap_form', '~> 5.0'
+
+gem 'devise-jwt'
+
+gem 'jwt'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'database_cleaner'
