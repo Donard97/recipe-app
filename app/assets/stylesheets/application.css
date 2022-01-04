@@ -16,4 +16,22 @@
 
 .add-btn {
   float: right;
+  width: 100px;
+  font-weight: 600;
+}
+
+.food-btn {
+  color: black;
+  font-weight: 600;
+  margin: 10px 0;
+  width: 100%;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.food-form {
+  width: 50%;
 }
