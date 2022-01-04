@@ -1,0 +1,26 @@
+<%= form_with(model: food) do |form| %>
+  <div>
+    <%= form.label :name, class: "label" %>
+    <div>
+      <%= form.text_field :name, autofocus: true, class: "input", required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :measurement_unit, class: "label" %>
+    <div>
+      <%= form.text_field :measurement_unit, autofocus: true, class: "input", required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :price, class: "label" %>
+    <div>
+      <%= form.number_field :price, autofocus: true, class: "input", required: true, min: 1 %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %> 
