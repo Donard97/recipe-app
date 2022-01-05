@@ -1,2 +1,12 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<nav class="fs-6 p-3 container mt-2 p-2 bio">
+  <%= link_to "Home", recipes_path %>
+</nav>
+<div>
+  <div>
+    <div class="border border-3 border-dark container p-2 my-5 bio">
+      <div class="d-flex justify-content-between my-3">
+        <h4><%= @recipe.name %></h4>
+      </div>
+    </div>
+  </div>
+</div> 
