@@ -11,7 +11,7 @@
     <% @recipes.each do |r| %>
       <li>
         <div >
-          <%= link_to recipe_path(@recipes.name), id: "recipe_path#{r.id}" do %>
+          <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
           <h4><%= r.name%></h4>
           <% end %>
           <p><%= r.description%></p>
