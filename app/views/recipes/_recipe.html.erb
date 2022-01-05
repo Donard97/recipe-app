@@ -1,0 +1,9 @@
+<div class="fs-4 p-3 border border-1 container mt-5 p-2 bio">
+  <%= form_with model: @recipe, method: :post, local: true do |f| %>
+    <%= f.label :name, "Name", class: "form-label fs-6" %>
+    <%= f.text_field :name, :placeholder => "Add Your Recipe name here...", required: true, class: "form-control mb-4" %>
+    <%= f.label :description, "Write description", class: "form-label fs-6" %>
+    <%= f.text_area :description, size: "80x15", :placeholder => "Add your description here...", required: true, class: "form-control" %>
+    <%= f.submit "Add Recipe", data: {disable_with: "Adding..."}, class: "btn btn-primary my-3" %>
+  <% end %>
+</div> 
