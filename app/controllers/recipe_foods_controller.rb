@@ -10,12 +10,12 @@ class RecipeFoodsController < ApplicationController
   def edit; end
 
   def create
-    @recipe_food = Recipe.Food.new(recipe_food_params)
+    @recipe_food = RecipeFood.new(recipe_food_params)
 
     respond_to do |format|
       if @recipe_food.save
         format.html do
-          redirect_to recipe_path([:recipe_id]), notice: 'Recipe food was successfully created.')
+          redirect_to recipe_path([:recipe_id]), notice: 'Recipe food was successfully created.'
         end
       else
         set_foods
