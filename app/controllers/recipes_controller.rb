@@ -35,6 +35,7 @@ class RecipesController < ApplicationController
     end
     redirect_to(recipes_path)
   end
+
   private
 
   def recipe_params
