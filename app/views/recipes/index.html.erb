@@ -1,22 +1,21 @@
 <div>
-<ul >
-  <li >
-    <%= link_to "Create Recipe", new_recipe_path, class: "nav-link" %>
-  </li>
-  <li >
-     <%= link_to "My Recipes", recipes_path,  class: "nav-link" %>
-  </li>
-</ul>
   <ul>
     <% @recipes.each do |r| %>
-      <li>
+    <li class="border border-3 border-dark container mt-5 p-2 bio">
+      <div class= "mt-2" >
         <div >
           <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
           <h4><%= r.name%></h4>
           <% end %>
+          <div class="mt-4" >
+            <%= button_to "Delete", recipe_path(r.id), method: :delete, data: {disable_with: "Deleting..."}, class: "btn btn-primary btn-floating mx-1"%>
+          </div>
+        </div>
+        <div>
           <p><%= r.description%></p>
         </div>
-      </li>
+      </div>
+    </li>
     <% end %>
   </ul>
 </div>
