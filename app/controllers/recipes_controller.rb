@@ -25,9 +25,20 @@ class RecipesController < ApplicationController
     end
   end
 
+  def destroy
+    @recipe = Recipe.find(params[:id])
+
+    if @recipe.destroy
+      flash[:notice] = 'Recipe deleted successfully!'
+    else
+      flash[:alert] = 'Unable to delete recipe. Please try again later.'
+    end
+    redirect_to(recipes_path)
+  end
+
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :description)
+    params.require(:recipe).permit(:name, :description, :public, :preparation_time, :cooking_time)
   end
 end

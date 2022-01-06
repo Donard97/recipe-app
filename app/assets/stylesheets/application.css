@@ -14,6 +14,12 @@
  *= require_self
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 .add-btn {
   float: right;
   width: 100px;
@@ -33,4 +39,37 @@ a {
 
 .food-form {
   width: 50%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.r-name {
+  width: 30%;
+}
+
+.d-btn {
+  padding: 1px 25px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.public-btn {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.recipe-form {
+  width: 50%;
+  margin: auto;
+}
+
+.log-btn {
+  margin: auto;
+  width: fit-content;
+}
+
+.log-input {
+  width: 140px;
 }
