@@ -64,3 +64,12 @@ li {
   width: 50%;
   margin: auto;
 }
+
+.log-btn {
+  margin: auto;
+  width: fit-content;
+}
+
+.log-input {
+  width: 140px;
+}
