@@ -14,10 +14,10 @@
  *= require_self
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: Inter, sans-serif;
 }
 
 .add-btn {
@@ -72,4 +72,43 @@ li {
 
 .log-input {
   width: 140px;
+}
+
+.r-btn {
+  font-weight: 600;
+}
+
+.f-select {
+  width: 100%;
+  padding: 7px;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+select#recipe_food_food_id {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+select#recipe_food_food_id:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.rf-btn {
+  margin: auto;
+  width: fit-content;
 }
