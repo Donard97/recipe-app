@@ -1,12 +1,30 @@
-<nav class="fs-6 p-3 container mt-2 p-2 bio">
-  <%= link_to "Home", recipes_path %>
-</nav>
-<div>
+<div class="border border-3 border-dark container p-2 my-5 ">
+  <div class="d-flex justify-content-between my-3">
+    <h2><%= @recipe.name %></h2>
+  </div>
   <div>
-    <div class="border border-3 border-dark container p-2 my-5 bio">
-      <div class="d-flex justify-content-between my-3">
-        <h4><%= @recipe.name %></h4>
+    <div class="split">
+      <div>
+        <h5> Preparation time: <%= @recipe.preparation_time %> min </h5>
+      </div>
+      <div>
+        <% if @recipe.public %>
+          Public: <input type="checkbox" checked="true" class="mx-4" >
+        <% end %>
+        <% if !@recipe.public %>
+          Public: <input type="checkbox" class="mx-4" >
+        <% end %>
       </div>
     </div>
+    <div>
+      <h5> Cooking time: <%= @recipe.preparation_time %> min </h5>
+      <h5> Steps go here...</h5>
+    </div>
+    <div>
+      <%= link_to "Generate shopping list", recipes_path, data: {disable_with: "Adding..."}, class: "btn btn-primary btn-floating mx-1"%>
+    </div>
+    <div>
+      <%= link_to "Add ingredient", recipes_path, data: {disable_with: "Adding..."}, class: "btn btn-primary btn-floating mx-1"%>
+    </div>
   </div>
-</div> 
+</div>
