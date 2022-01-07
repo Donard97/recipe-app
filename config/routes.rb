@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'shopping_list/index'
-  get 'shopping_list/show'
   devise_for :users
   root to: 'foods#index'
   resources :foods, only: [:index, :create, :new, :destroy]
@@ -22,5 +20,5 @@ Rails.application.routes.draw do
     end 
   end
 
-
+  get 'shopping_list', to: 'shopping_list#index'
 end
