@@ -1,2 +1,28 @@
-<h1>ShoppingList#index</h1>
-<p>Find me in app/views/shopping_list/index.html.erb</p>
+<div class="container columns is-flex-direction-column is-align-items-center">
+	<div class="column is-half has-text-centered">
+		<h1 class="title">Shopping List</h1>
+		<div class="columns container has-text-weight-semibold">
+			<div class="column">
+				<p>Amount of food items to buy: <%= @foods.count %></p>
+			</div>
+			<div class="column">
+				<p>Total value of food needed: $ <%= @total_price %></p>
+			</div>
+		</div>
+	</div>
+
+	<table class="table is-narrow is-hoverable">
+		<thead>
+			<tr>
+			<th>Food</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @foods.each do |food| %>
+			<%= render 'table', food: food %>
+			<% end %>
+		</tbody>
+	</table>
+</div>
