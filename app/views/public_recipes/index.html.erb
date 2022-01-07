@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="bio">Public Recipes</h1>
+
+  <div>
+    <% if @recipes.size > 0 %>
+    <% @recipes.each do |recipe|%>
+      <div class="border border-2 container mt-5 p-2 bio px-3">
+        <div>
+          <%= link_to recipe_path(recipe.id), id: "recipe_path#{recipe.id}" do %>
+          <h4><%= recipe.name%></h4>
+          <% end %>
+
+          <p>By: <%= User.find_by(id: recipe.user_id).name%></p>
+        </div>
+        <div>
+          <p><%= recipe.description%></p>
+        </div>
+      </div>
+    <%end%>
+    <% else %>
+    <p class="border border-2 container mt-5 p-2 bio px-5 fs-1">There are no public recipes yet!!</p>
+    <% end %>
+  </div>
+</div>
