@@ -22,8 +22,9 @@ body {
 
 .add-btn {
   float: right;
-  width: 100px;
+  width: 110px;
   font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .food-btn {
@@ -111,4 +112,16 @@ select#recipe_food_food_id:focus {
 .rf-btn {
   margin: auto;
   width: fit-content;
+}
+
+.btn {
+  letter-spacing: 1px;
+}
+
+.cr-btn {
+  font-weight: 600;
+}
+
+.recipe {
+  width: 70%;
 }

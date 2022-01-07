@@ -24,6 +24,18 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @recipe_food.update(recipe_food_params)
+        format.html do
+          redirect_to recipe_path(recipe_food_params[:recipe_id]), notice: 'Recipe food was successfully updated.'
+        end
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     recipe = @recipe_food.recipe
     recipe.foods.delete(@recipe_food.food)
