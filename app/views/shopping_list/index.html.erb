@@ -1,0 +1,28 @@
+<div class="container border border-2 rounded w-50">
+	<div class="column is-half has-text-centered p-4">
+		<h1 class="title text-center">Shopping List</h1>
+		<div class="columns container d-flex justify-content-around p-2">
+			<div class="column p-3">
+				<p>Amount of food items to buy: <%= @foods.count %></p>
+			</div>
+			<div class="column p-3">
+				<p>Total value of food needed: $ <%= @total_price %></p>
+			</div>
+		</div>
+	</div>
+
+	<table class="table border">
+		<thead class="bg-dark text-white">
+			<tr>
+			<th>Food</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @foods.each do |food| %>
+			<%= render 'table', food: food %>
+			<% end %>
+		</tbody>
+	</table>
+</div>

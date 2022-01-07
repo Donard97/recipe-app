@@ -7,15 +7,15 @@
   </div>
 
   <div class="field container">
-    <%= form.label :quantity, class: "label" %>
+    <%= form.label :quantity, class: "form-label" %>
     <div class="control">
-      <%= form.text_field :quantity, class: "input", type: "number", required: true, min: 1 %>
+      <%= form.text_field :quantity, class: "form-control", type: "number", required: true, min: 1 %>
     </div>
   </div>
 
   <%= form.hidden_field :recipe_id, value: recipe_food.recipe_id %>
 
-  <div class="actions container">
-    <%= form.submit class: "button is-success" %>
+  <div class="actions container p-3">
+    <%= form.submit class: "btn btn-primary d-flex m-auto" %>
   </div>
 <% end %>

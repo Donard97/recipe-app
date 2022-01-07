@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
+  load_and_authorize_resource
   def index
-    @recipes = current_user.recipes.all
+    @recipes = Recipe.where(user_id: current_user.id)
   end
 
   def show
@@ -28,12 +29,12 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
 
-    if @recipe.destroy
+    if @recipe.delete
       flash[:notice] = 'Recipe deleted successfully!'
     else
       flash[:alert] = 'Unable to delete recipe. Please try again later.'
     end
-    redirect_to(recipes_path)
+    redirect_to(recipe_path)
   end
 
   private
