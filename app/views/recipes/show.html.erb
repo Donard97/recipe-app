@@ -1,0 +1,33 @@
+<div class="border border-2 border-primary container p-2 my-5 rounded recipe">
+  <div class="my-3 text-center">
+    <h2 class><%= @recipe.name%></h2>
+  </div>
+  <div>
+    <div class="split">
+      <div class="d-flex justify-content-between p-2">
+        <h5> Preparation time: <%= @recipe.preparation_time %> min </h5>
+        <div class="public-btn">
+        <% if @recipe.public %>
+          Public: <input type="checkbox" checked="true" class="mx-4" >
+        <% end %>
+        <% if !@recipe.public %>
+          Public: <input type="checkbox" class="mx-4" >
+        <% end %>
+      </div>
+      </div>
+    </div>
+    <div>
+      <h5 class="p-2"> Cooking time: <%= @recipe.preparation_time %> min </h5>
+      <h5 class="p-2"> Steps go here...</h5>
+    </div>
+    <div class="d-flex justify-content-around p-3">
+    <%= link_to 'Generate shopping list', shopping_list_path, class: "btn btn-primary btn-floating mx-1 r-btn" %>
+			<% if can? :update, @recipe %>
+				<%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: "btn btn-primary btn-floating mx-1 r-btn" %>
+			<% end %>
+    </div>
+    <div class="column is-three-quarters">
+		<%= render partial: "recipe_foods/index", locals: { recipe_foods: @recipe } %>
+	</div>
+  </div>
+</div>

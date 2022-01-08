@@ -1,0 +1,29 @@
+<div class="container w-50 text-center">
+
+<%= form_with(model: @recipe_food) do |form| %>
+  <div class="card form">
+  <div class="card-body">
+  <div class="field container">
+    <%= form.label :food, class: "form-label p-2" %>
+    <div class="select">
+      <%= form.select :food_id, @foods, class: "form-select"  %>
+    </div>
+  </div>
+
+  <div class="field container">
+    <%= form.label :quantity, class: "form-label p-2" %>
+    <div class="control">
+      <%= form.text_field :quantity, class: "form-control", type: "number", required: true, min: 1 %>
+    </div>
+  </div>
+
+  <%= form.hidden_field :recipe_id, value: @recipe_food.recipe_id %>
+
+  <div class="actions rf-btn p-3">
+    <%= form.submit class: "btn btn-primary btn-floating mx-1" %>
+  </div>
+</div>
+</div>
+<% end %>
+
+</div>

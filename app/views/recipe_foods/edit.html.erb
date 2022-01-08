@@ -1,0 +1,14 @@
+
+<div class="container w-50">
+  <div class="column is-two-fifths-desktop">
+		<h3 class="title is-4 text-center pb-3">Edit Ingredient</h3>
+		<div class="card">
+		<div class="card-body">
+		<%= render 'form', recipe_food: @recipe_food %>
+		<div class="d-flex m-auto">
+		<%= link_to 'Back', url_for(:back), class: "button is-light d-flex m-auto" %>
+		</div>
+		</div>
+			</div>
+	</div>
+</div>

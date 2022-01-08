@@ -1,0 +1,164 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+
+body {
+  font-family: 'Luxurious Roman', cursive;
+}
+
+.add-btn {
+  float: right;
+  width: 110px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.food-btn {
+  font-weight: 600;
+  margin: 10px 0;
+  width: 100%;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.food-form {
+  width: 50%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.r-name {
+  width: 30%;
+}
+
+.d-btn {
+  padding: 1px 25px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+.public-btn {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.recipe-form {
+  width: 50%;
+  margin: auto;
+}
+
+.log-btn {
+  margin: auto;
+  width: fit-content;
+}
+
+.log-input {
+  width: 140px;
+}
+
+.r-btn {
+  font-weight: 600;
+}
+
+.f-select {
+  width: 100%;
+  padding: 7px;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+select#recipe_food_food_id {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* stylelint-disable-next-line selector-id-pattern */
+select#recipe_food_food_id:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.rf-btn {
+  margin: auto;
+  width: fit-content;
+}
+
+.btn {
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.cr-btn {
+  font-weight: 600;
+}
+
+.recipe {
+  width: 70%;
+}
+
+.menu {
+  color: white;
+}
+
+.btn-nav {
+  margin-right: 8px;
+}
+
+.btn-nav a {
+  color: white;
+}
+
+.sign-btn {
+  font-size: 13px;
+  padding: 3px 10px;
+  margin-right: 20px;
+}
+
+.nav-menu {
+  height: 50px;
+}
+
+.food {
+  width: 50%;
+  margin: auto;
+}
+
+.delete-btn {
+  padding: 0;
+}
+
+.actions-btn {
+  padding: 0;
+  margin-left: 5px;
+}

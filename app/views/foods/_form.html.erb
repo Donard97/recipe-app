@@ -1,0 +1,32 @@
+<div class="container food-form">
+
+<%= form_with(model: food) do |form| %>
+  <div class="card form">
+  <div class="card-body">
+  <div class="mb-3">
+    <%= form.label :name, class: "form-label" %>
+    <div>
+      <%= form.text_field :name, autofocus: true, class: "form-control", required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :measurement_unit, class: "form-label" %>
+    <div>
+      <%= form.text_field :measurement_unit, autofocus: true, class: "form-control", required: true %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.label :price, class: "form-label" %>
+    <div>
+      <%= form.number_field :price, autofocus: true, class: "form-control", required: true, min: 1 %>
+    </div>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-primary btn-floating mx-1 food-btn" %>
+  </div>
+</div>
+</div>
+<% end %> 

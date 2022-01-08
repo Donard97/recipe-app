@@ -1,0 +1,28 @@
+<div class="is-flex is-justify-content-end my-6 container">
+  <%= link_to 'Create Recipe', new_recipe_path, class: "btn btn-dark cr-btn" %>
+</div>
+<div>
+  <ul>
+    <% if @recipes.size > 0%>
+    <% @recipes.each do |r| %>
+    <li class="border border-2 border-primary container mt-5 rounded bio">
+      <div class="d-flex p-3">
+        <div class="r-name">
+          <%= link_to recipe_path(r.id), id: "recipe_path#{r.id}" do %>
+          <h4 class="text-dark"><%= r.name%></h4>
+          <% end %>
+          <div>
+            <%= button_to "Remove", recipe_path(r.id), method: :delete, class: "btn btn-primary btn-floating mx-1 d-btn"%>
+          </div>
+        </div>
+        <div>
+          <p><%= r.description%></p>
+        </div>
+      </div>
+    </li>
+    <% end %>
+    <% else %>
+    <p class="border border-2 container mt-5 p-2 bio px-5 fs-1">There are no recipes registered!</p>
+    <% end %>
+  </ul>
+</div>

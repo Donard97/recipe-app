@@ -1,0 +1,49 @@
+<div class="container w-50">
+<h2 class="text-center">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <div class="card form">
+  <div class="card-body">
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="field">
+    <%= f.label :name, { class: "form-label"} %><br />
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname, { class: "form-label"} %><br />
+    <%= f.text_field :surname, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, { class: "form-label"} %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, { class: "form-label"} %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, { class: "form-label"} %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+  </div>
+
+  <div class="actions log-btn p-2">
+    <%= f.submit "Sign up", class: "btn btn-primary btn-floating mx-1 log-input" %>
+  </div>
+
+</div>
+</div>
+<% end %>
+
+<div class="text-center">
+<%= render "devise/shared/links" %>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <%= link_to 'Add Food', new_food_path, class: "btn btn-primary btn-floating mx-1 add-btn"%>
+
+
+<div>
+  <table class="table border">
+    <thead class="bg-dark text-white">
+      <tr>
+        <th scope="col">Food</th>
+        <th scope="col" title="measurement">Measurement unit</th>
+        <th scope="col" title="price">Unit price</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @foods.each do |food| %>
+        <tr>
+          <th scope="row"><%= food.name %></th>
+          <td><%= food.measurement_unit %></td>
+          <td>$<%= food.price %></td>
+          <td><%= button_to 'Delete', food_url(food), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link delete-btn" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</div>
