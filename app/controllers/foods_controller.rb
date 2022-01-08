@@ -3,7 +3,11 @@ class FoodsController < ApplicationController
   before_action :set_food, only: %i[show destroy]
 
   def index
-    @food = current_user.foods
+    if user_signed_in?
+      @food = current_user.foods
+    else
+      redirect_to user_session_path
+    end
   end
 
   def new
@@ -23,6 +27,8 @@ class FoodsController < ApplicationController
   end
 
   def destroy
+    @recipes = RecipeFood.where(food_id: @food.id)
+    @recipes.each(&:delete)
     @food.delete
     respond_to do |format|
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }

@@ -116,6 +116,7 @@ select#recipe_food_food_id:focus {
 
 .btn {
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .cr-btn {
@@ -146,4 +147,18 @@ select#recipe_food_food_id:focus {
 
 .nav-menu {
   height: 50px;
+}
+
+.food {
+  width: 50%;
+  margin: auto;
+}
+
+.delete-btn {
+  padding: 0;
+}
+
+.actions-btn {
+  padding: 0;
+  margin-left: 5px;
 }

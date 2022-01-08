@@ -12,7 +12,7 @@
           <h4 class="text-dark"><%= r.name%></h4>
           <% end %>
           <div>
-            <%= link_to "Delete", recipe_path(r.id), method: :delete, data: {disable_with: "Deleting..."}, class: "btn btn-primary btn-floating mx-1 d-btn"%>
+            <%= button_to "Remove", recipe_path(r.id), method: :delete, class: "btn btn-primary btn-floating mx-1 d-btn"%>
           </div>
         </div>
         <div>
