@@ -1,9 +1,10 @@
 class ShoppingListController < ApplicationController
   before_action :authenticate_user!
+  include ShoppingListHelper
 
   def index
     @recipes = current_user.recipes
-    @foods = Food.joins(:recipe_foods).where(user_id: current_user.id)
+    @foods = foods_join
     @total_price = 0
     @recipes.each do |recipe|
       @total_price += recipe.total_price

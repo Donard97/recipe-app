@@ -26,19 +26,6 @@ class RecipesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   # previous_url = request.env['HTTP_REFERER']
-  #   @recipe = Recipe.find(params[:id])
-
-  #   if @recipe.delete
-  #     @recipe.destroy
-  #     flash[:notice] = 'Recipe deleted successfully!'
-  #   else
-  #     flash[:alert] = 'Unable to delete recipe. Please try again later.'
-  #   end
-  #   # redirect_to(previous_url)
-  # end
-
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
