@@ -2,7 +2,6 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
     user ||= User.new
     if user.role == 'admin'
       can :manage, :all
@@ -21,9 +20,8 @@ class Ability
       food.user.id == user.id
     end
     can %i[create], :all
-    
+
     # return unless user.present?
-    
 
     # can :read, Recipe, public: true
     # can :manage, Recipe, user: user

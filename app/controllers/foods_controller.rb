@@ -28,9 +28,7 @@ class FoodsController < ApplicationController
 
   def destroy
     @recipes = RecipeFood.where(food_id: @food.id)
-    @recipes.each do |recipe|
-      recipe.delete
-    end
+    @recipes.each(&:delete)
     @food.delete
     respond_to do |format|
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }
