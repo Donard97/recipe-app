@@ -147,3 +147,8 @@ select#recipe_food_food_id:focus {
 .nav-menu {
   height: 50px;
 }
+
+.food {
+ width: 50%;
+ margin: auto;
+}
