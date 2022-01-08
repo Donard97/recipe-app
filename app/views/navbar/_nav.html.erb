@@ -1,20 +1,15 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark d-flex justify-content-end nav-menu">
 <% if user_signed_in? %>
-<div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <%= link_to "Food", foods_path, class: "navbar-item #{current_page?(foods_path) ? "is-active" : ""}" %>
-        <%= link_to "My Recipes", recipes_path, class: "navbar-item #{current_page?(recipes_path) ? "is-active" : ""}" %>
-        <%= link_to "Public Recipes", public_recipes_path, class: "navbar-item" %>
-        <%= link_to "Shopping List", shopping_list_index_path, class: "navbar-item #{current_page?(shopping_list_index_path) ? "is-active" : ""}" %>
+<div class="navbar-menu d-flex menu">
+      <div class="navbar-start btn-nav">
+        <%= link_to "Food", foods_path, class: "navbar-item p-2 #{current_page?(foods_path) ? "is-active" : ""}" %>
+        <%= link_to "My Recipes", recipes_path, class: "navbar-item p-2 #{current_page?(recipes_path) ? "is-active" : ""}" %>
+        <%= link_to "Public Recipes", public_recipes_path, class: "navbar-item p-2" %>
+        <%= link_to "Shopping List", shopping_list_index_path, class: "navbar-item p-2 #{current_page?(shopping_list_index_path) ? "is-active" : ""}" %>
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="buttons">
-            <span class="button is-static is-small"><%= current_user.name %></span>
-            <span class="button is-static is-small">  <%= current_user.recipes.where(public: true).count %></span>
-            <span class="button is-static is-small">  <%= current_user.recipes.where(public: false).count %></span>
-            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "button is-small is-danger is-light" %>
-          </div>
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-light sign-btn" %>
         </div>
       </div>
 </div>
