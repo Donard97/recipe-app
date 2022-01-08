@@ -2,7 +2,10 @@
 
 # Recipe App
 
-This is a ruby on rails application that allows users to create and manage recipes.
+The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe.
+
+![image](https://user-images.githubusercontent.com/74506933/148657824-2071ae71-1f69-44af-9b48-3022ec3f9d28.png)
+
 
 
 # Getting Started
@@ -51,6 +54,10 @@ If you encounter any errors, run the following commands.
 - Twitter: [@donardgolaj](https://twitter.com/donardgolaj)
 - LinkdIn : [@donard-golaj](https://www.linkedin.com/in/donard-golaj/)
 
+👤 **Kossi-Stack**
+
+- GitHub: [@githubhandle](https://kossi-stack.github.io/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kossifioklou2406/)
 
 
 # 🤝 Contributing
