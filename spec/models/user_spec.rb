@@ -15,9 +15,4 @@ RSpec.describe User, type: :model do
     subject.name = 'Donard'
     expect(subject).to be_valid
   end
-
-  it 'should return role user' do
-    subject.set_role
-    expect(subject.reload.role).to eq 'user'
-  end
 end
