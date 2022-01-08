@@ -125,3 +125,25 @@ select#recipe_food_food_id:focus {
 .recipe {
   width: 70%;
 }
+
+.menu {
+  color: white;
+}
+
+.btn-nav {
+  margin-right: 8px;
+}
+
+.btn-nav a {
+  color: white;
+}
+
+.sign-btn {
+  font-size: 13px;
+  padding: 3px 10px;
+  margin-right: 20px;
+}
+
+.nav-menu {
+  height: 50px;
+}
