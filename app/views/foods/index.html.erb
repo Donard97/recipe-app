@@ -19,7 +19,7 @@
           <th scope="row"><%= food.name %></th>
           <td><%= food.measurement_unit %></td>
           <td>$<%= food.price %></td>
-          <td><%= button_to 'Delete', food_url(food), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary btn-floating mx-1 add-btn" %></td>
+          <td><%= button_to 'Delete', food_url(food), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link delete-btn" %></td>
         </tr>
       <% end %>
     </tbody>

@@ -30,6 +30,6 @@ RSpec.feature 'Recipe Index', type: :feature do
   end
 
   it 'check the delete butto' do
-    expect(page).to have_content 'Delete'
+    expect(page).to have_content 'Remove'
   end
 end

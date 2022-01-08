@@ -5,9 +5,8 @@ class RecipeFoodsController < ApplicationController
   def new
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.new
+    @recipe_food.save
   end
-
-  def edit; end
 
   def create
     @recipe_food = RecipeFood.new(recipe_food_params)
@@ -15,7 +14,7 @@ class RecipeFoodsController < ApplicationController
     respond_to do |format|
       if @recipe_food.save
         format.html do
-          redirect_to recipe_path([:recipe_id]), notice: 'Recipe food was successfully created.'
+          redirect_to recipe_path(@recipe_food.recipe), notice: 'Recipe food was successfully created.'
         end
       else
         set_foods
@@ -36,12 +35,19 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
+  # def destroy
+  #   recipe = @recipe_food.food
+  #   recipe.foods.delete(@recipe_food.food)
+  #   respond_to do |format|
+  #     format.html { redirect_to recipe_path(recipe), notice: 'Recipe food was successfully deleted.' }
+  #   end
+  # end
+
   def destroy
-    recipe = @recipe_food.recipe
-    recipe.foods.delete(@recipe_food.food)
-    respond_to do |format|
-      format.html { redirect_to recipe_path(recipe), notice: 'Recipe food was successfully deleted.' }
-    end
+    @recipe_food = RecipeFood.find(params[:id])
+    @recipe_food.destroy
+    flash[:success] = 'Recipe Food deleted successfully.'
+    redirect_to recipe_path(@recipe_food.recipe_id)
   end
 
   private

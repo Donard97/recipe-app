@@ -7,11 +7,9 @@ Rails.application.routes.draw do
     resources :recipe_foods, only: [:new, :destroy]
   end
   
-  resources :recipe_foods, only: [:edit, :update, :destroy, :create]
+  resources :recipe_foods, only: [:index, :edit, :update, :destroy, :create, :new]
 
   resources :public_recipes, only: %i[index]
-
-  resources :shopping_list, only: [:index]
 
   devise_scope :user do 
     authenticated :user do 
@@ -21,4 +19,6 @@ Rails.application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root 
     end 
   end
+
+  get 'shopping_list', to: 'shopping_list#index'
 end
